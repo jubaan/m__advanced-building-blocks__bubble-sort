@@ -26,11 +26,11 @@ def bubble_sort_by(arr)
       arr.push(arr.shift)
     end
     arr2.push(arr.shift)
+    print "#{arr2}\n"
   end
-
   arr2
 end
 
-bubble_sort_by(%w[hi hello hey]) do |left, right|
+bubble_sort_by(%w[i was told that you came late]) do |left, right|
   left.length - right.length
 end
