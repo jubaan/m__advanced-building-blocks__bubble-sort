@@ -7,7 +7,7 @@
 More info: [The Odin Project](https://www.theodinproject.com/courses/ruby-programming/lessons/advanced-building-blocks)
 
 ### Part I : 
-> Build a bubble_sort method that takes an array parameter and returns a sorted array. It must use the bubble sort methodology (using #sort would be pretty pointless, wouldn’t it?).
+> Build #bubble_sort methhod that takes in an array and returns a sorted array. It must use the bubble sort methodology (using the ruby #sort method would be pretty pointless, wouldn’t it?).
 
 **Solution -**
 [bubble_sort](https://repl.it/@jubaan/Bubblesort)
