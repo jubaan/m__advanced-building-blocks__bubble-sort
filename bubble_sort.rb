@@ -4,7 +4,7 @@ def bubble_sort(arr)
   arr2 = []
   arr.length.times do
     (arr.length - 1).times do
-      arr[0], arr[1] = arr[1], arr[0] if arr[0] <= arr[1]
+      arr[0], arr[1] = arr[1], arr[0] if arr[0] < arr[1]
       arr.push(arr.shift)
     end
     arr2.push(arr.shift)
@@ -24,11 +24,11 @@ def bubble_sort_by(arr)
       arr.push(arr.shift)
     end
     arr2.push(arr.shift)
+    print "#{arr2}\n"
   end
-
   arr2
 end
 
-bubble_sort_by(%w[hi hello hey]) do |left, right|
+bubble_sort_by(%w[i was told that you came late]) do |left, right|
   left.length - right.length
 end
