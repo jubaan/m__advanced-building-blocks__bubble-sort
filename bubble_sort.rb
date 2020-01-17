@@ -1,25 +1,34 @@
-# Bubble sort method
+# Bubble sort method for sorting numbers
 
 def bubble_sort(arr)
-  counter = 0
-  (arr.length**2).times do
-    arr[counter], arr[counter + 1] = arr[counter + 1], arr[counter] if arr[counter] > arr[counter + 1]
-    counter += 1
-    counter = 0 if counter == arr.length - 1
+  arr2 = []
+  arr.length.times do
+    (arr.length - 1).times do
+      arr[0], arr[1] = arr[1], arr[0] if arr[0] <= arr[1]
+      arr.push(arr.shift)
+    end
+    arr2.push(arr.shift)
   end
-  arr
+  arr2
 end
 
-bubble_sort([4, 3, 78, 2, 0, 2])
+bubble_sort([3, 4, 78, 2, 0, 2])
 
-def bubble_sort(arr)
-  counter = 0
-  (arr.length**2).times do
-    arr[counter], arr[counter + 1] = arr[counter + 1], arr[counter] if arr[counter] > arr[counter + 1]
-    counter += 1
-    counter = 0 if counter == arr.length - 1
+# Bubble sort by method for sorting words by ther length
+
+def bubble_sort_by(arr)
+  arr2 = []
+  arr.length.times do
+    (arr.length - 1).times do
+      arr[0], arr[1] = arr[1], arr[0] if yield(arr) <= 0
+      arr.push(arr.shift)
+    end
+    arr2.push(arr.shift)
   end
-  arr
+
+  arr2
 end
 
-bubble_sort([4, 3, 78, 2, 0, 2])
+bubble_sort_by(%w[hi hello hey]) do |left, right|
+  left.length - right.length
+end
