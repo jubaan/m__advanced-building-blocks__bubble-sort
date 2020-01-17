@@ -9,7 +9,8 @@ def bubble_sort(arr)
     end
     arr2.push(arr.shift)
   end
-  arr2
+  arr = arr2
+  arr
 end
 
 bubble_sort([3, 4, 78, 2, 0, 2])
